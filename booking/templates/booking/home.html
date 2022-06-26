@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Tasty!</title>
+</head>
+<body>
+    <h1>Tasty is on the way!</h1>
+    <table>
+        {% for order in orders %}
+            <tr>
+            {% if order.done %}
+                <td><strike>{{ order.name }}</strike></td>
+            {% else %}
+                <td>{{ order.name }}</td>
+            {% endif %}
+               
+            </tr>
+        {% empty %} 
+        <tr><td>You have not order anything yet!</td></tr>
+        {% endfor%}
+    </table>
+    <a href="/place_order">Place your order</a>
+</body>
+</html>
