@@ -16,7 +16,11 @@
             {% else %}
                 <td>{{ order.name }}</td>
             {% endif %}
-               
+            <td>
+                <a href="/edit/{{ order.id }}">
+                    <button>Edit</button>
+                </a>
+            </td>
             </tr>
         {% empty %} 
         <tr><td>You have not order anything yet!</td></tr>

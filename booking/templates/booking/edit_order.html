@@ -7,13 +7,13 @@
     <title>Place an order</title>
 </head>
 <body>
-    <h1>Place your order:</h1>
+    <h1>Edit your order:</h1>
     <form method='POST' >
         {% csrf_token %}
         {{ form }}
         <div>
             <p>
-                <button type="submit">Place an Order</button>
+                <button type="submit">Edit Order</button>
             </p>
         </div>
     </form>
